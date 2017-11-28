@@ -1,0 +1,164 @@
+.promo {
+  margin: 0;
+  padding: 0;
+}
+
+.promo__wrapper {
+  .container();
+  position: relative;
+  padding: 50px 0;
+  padding-top: 90px;
+  text-align: center;
+}
+
+.promo__lang-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 110px;
+  margin: 0 auto;
+}
+
+.promo__lang-switch {
+  flex-grow: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  background: @orange;
+  opacity: .3;
+  transition: opacity .3s ease;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+  }
+}
+
+.promo__lang-switch--ru {
+  border-bottom-left-radius: 22px 30px;
+}
+
+.promo__lang-switch--en {
+  border-bottom-right-radius: 22px 30px;
+}
+
+.promo__lang-switch--active, .promo__lang-switch:hover {
+  opacity: 1;
+}
+
+.promo__lang-switch-container span {
+  cursor: default;
+}
+
+.promo__logo {
+    margin-bottom: 40px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+
+.promo__logo:hover {
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.promo__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.promo__author {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  span{
+    display: block;
+  }
+}
+
+.promo__author-info {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.promo__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promo__item {
+  font-weight: bold;
+  span {
+    color: @orange;
+    text-transform: uppercase;
+  }
+}
+
+@media @tablet-widths {
+  .promo__wrapper {
+    padding-top: 70px;
+  }
+
+  .promo__title {
+    font-size: 28px;
+  }
+
+  .promo__author {
+    font-size: 26px;
+    margin-bottom: 40px;
+    span{
+      display: inline-block;
+    }
+  }
+
+
+  .promo__lang-switch--ru {
+    border-bottom-left-radius: 0 0;
+    border-top-left-radius: 22px 30px;
+  }
+
+  .promo__lang-switch--en {
+    border-bottom-right-radius: 22px 30px;
+  }
+
+  .promo__author-info {
+    font-size: 18px;
+  }
+
+  .promo__list {
+    display: flex;
+    width: 360px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .promo__item {
+    font-size: 16px;
+  }
+}
