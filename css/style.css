@@ -1293,6 +1293,8 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1301,6 +1303,7 @@ img {
             justify-content: center;
   }
   .certificates__item {
+    width: 25%;
     margin-right: 40px;
   }
   .portfolio__wrapper {
