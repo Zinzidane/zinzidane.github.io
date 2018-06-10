@@ -10,7 +10,6 @@
   position: relative;
 }
 
-
 .main-nav__toggler {
   position: absolute;
   right: 20px;
@@ -19,19 +18,18 @@
   padding: 0;
   width: 25px;
   height: 25px;
-  text-indent: -5000px;
   border: none;
   outline: none;
   background-color: transparent;
   font-size: 0;
   z-index: 100;
   cursor: pointer;
-  &:hover .main-nav__toggler-fill {
-    fill: @orange;
-  }
-  &:active .main-nav__toggler-fill {
-    opacity: 0.3;
-  }
+  // &:hover .main-nav__toggler-fill {
+  //   fill: @orange;
+  // }
+  // &:active .main-nav__toggler-fill {
+  //   opacity: 0.3;
+  // }
 }
 
 .main-nav--opened .main-nav__toggler-closed {
@@ -90,7 +88,7 @@
 
 @media @tablet-widths {
   .main-nav__wrapper {
-  	@include container;
+    .container();
     flex-direction: row;
   }
 

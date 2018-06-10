@@ -40,15 +40,6 @@
   text-decoration: none;
   text-align: center;
   transition: all .3s ease;
-  &:hover {
-    color: @orange;
-    transition: all .3s ease;
-    text-decoration: underline;
-  }
-  &:active {
-    color: #ffffff;
-    opacity: 0.3;
-  }
 }
 
 .certificates__name {
@@ -67,5 +58,17 @@
   .certificates__item {
     width: 25%;
     margin-right: 40px;
+  }
+
+  .certificates__link {
+    &:hover {
+      color: @orange;
+      transition: all .3s ease;
+      text-decoration: underline;
+    }
+    &:active {
+      color: #ffffff;
+      opacity: 0.3;
+    }
   }
 }

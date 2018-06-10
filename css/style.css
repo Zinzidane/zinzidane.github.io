@@ -475,6 +475,7 @@ img {
   padding: 0;
   width: 25px;
   height: 25px;
+  text-indent: -5000px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -697,8 +698,8 @@ img {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
-.socials__link--vk {
-  background: url("../img/icon-vk.svg") center no-repeat;
+.socials__link--tg {
+  background: url("../img/icon-telegram.svg") center no-repeat;
 }
 .socials__link--li {
   background: url("../img/icon-linkedin.svg") 65% 50% no-repeat;
@@ -1146,6 +1147,7 @@ img {
 }
 @media (min-width: 660px) {
   .main-nav__wrapper {
+    @include container;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
