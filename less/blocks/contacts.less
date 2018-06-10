@@ -91,19 +91,6 @@
   font-weight: bold;
   text-decoration: none;
   transition: all .3s ease;
-  &:hover {
-    color: @orange;
-    transition: all .3s ease;
-    text-decoration: underline;
-  }
-  &:active {
-    color: #000000;
-    opacity: 0.3;
-  }
-  &--notalink:hover, &--notalink:active {
-    color: #000000;
-    text-decoration: none;
-  }
 }
 
 .contacts__form {
@@ -133,12 +120,6 @@
   font-family: inherit;
   font: inherit;
   transition: all .3s ease;
-  &:hover {
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #ffd670;
-    transition: all .3s ease;
-  }
 }
 
 .contacts__textarea {
@@ -157,16 +138,6 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all .3s ease;
-  &:hover {
-    background-color: #000;
-    color: #ffd670;
-    transition: all .3s ease;
-  }
-  &:active {
-    background-color: #000;
-    color: #ffd670;
-    opacity: 0.3;
-  }
 }
 
 @media @tablet-widths {
@@ -177,12 +148,50 @@
     align-items: flex-start;
   }
 
+  .contacts__text {
+    &:hover {
+      color: @orange;
+      transition: all .3s ease;
+      text-decoration: underline;
+    }
+    &:active {
+      color: #000000;
+      opacity: 0.3;
+    }
+    &--notalink:hover, &--notalink:active {
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+
   .contacts__form-group {
     flex-direction: row;
     justify-content: space-between;
 
     input:nth-child(1) {
       margin-right: 10px;
+    }
+  }
+
+  .contacts__input {
+    &:hover {
+      background-color: #000000;
+      color: #ffffff;
+      border: 2px solid #ffd670;
+      transition: all .3s ease;
+    }
+  }
+
+  .contacts__btn {
+    &:hover {
+      background-color: #000;
+      color: #ffd670;
+      transition: all .3s ease;
+    }
+    &:active {
+      background-color: #000;
+      color: #ffd670;
+      opacity: 0.3;
     }
   }
 }

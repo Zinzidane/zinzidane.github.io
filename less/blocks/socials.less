@@ -34,18 +34,21 @@
   &--gh {
     background: url("../img/icon-github.svg") center no-repeat;
   }
-  &:hover {
-    border-color: @orange;
-    transition: all .3s ease;
-  }
-  &:active {
-    border-color: @lightgrey;
-    opacity:  0.3;
-  }
 }
 
 @media @tablet-widths {
   .socials__wrapper {
     margin-bottom: 90px;
+  }
+
+  .socials__link {
+    &:hover {
+      border-color: @orange;
+      transition: all .3s ease;
+    }
+    &:active {
+      border-color: @lightgrey;
+      opacity:  0.3;
+    }
   }
 }

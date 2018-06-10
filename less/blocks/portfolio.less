@@ -57,15 +57,18 @@
     transform: translate(-50%,-50%);
     font-weight: bold;
   }
-  &:hover {
-    opacity: 0.8;
-    transition: all .3s ease;
-  }
 }
 
 @media @tablet-widths {
   .portfolio__img {
     width: 420px;
     height: 323px;
+  }
+
+  .portfolio__dropdown-link {
+    &:hover {
+      opacity: 0.8;
+      transition: all .3s ease;
+    }
   }
 }
