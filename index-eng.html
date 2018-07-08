@@ -258,7 +258,7 @@
         <h2 class="portfolio__title">Portfolio</h2>
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/burger-app/">
                   <picture>
@@ -271,7 +271,7 @@
               <h3 class="portfolio__item-title">Burger Constructor</h3>
               <p class="portfolio__item-desc">React.js, HTML5, CSS3, Redux, Responsive design</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://protected-fjord-82300.herokuapp.com/">
                   <picture>
@@ -284,7 +284,7 @@
               <h3 class="portfolio__item-title">Keksobooking</h3>
               <p class="portfolio__item-desc">Node.js, Express.js, MongoDB, Mongoose, Javascript, OOP, Sorting, Rendering, Form validating</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://frozen-peak-18370.herokuapp.com/">
                   <picture>
@@ -297,7 +297,7 @@
               <h3 class="portfolio__item-title">Chat App</h3>
               <p class="portfolio__item-desc">Node.js, Express, Socket.io, Javascript, Tests, Mocha</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/382187-pink/index.html">
                     <picture>
@@ -310,7 +310,7 @@
              	<h3 class="portfolio__item-title">Pink</h3>
               <p class="portfolio__item-desc">HTML5, CSS3, Less, Gulp, Js, Responsive design</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/cat-energy/">
                   <picture>
@@ -325,7 +325,7 @@
               <h3 class="portfolio__item-title">Cat energy</h3>
               <p class="portfolio__item-desc">HTML5, CSS3, Sass, Gulp, Js, Responsive design</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/recipes-app/">
                   <picture>
@@ -338,7 +338,7 @@
               <h3 class="portfolio__item-title">Recipes</h3>
               <p class="portfolio__item-desc">Angular 5, Typescript, Bootstrap, Firebase, NgRx</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/mishka/">
                   <picture>
@@ -353,7 +353,7 @@
               <h3 class="portfolio__item-title">Mishka</h3>
               <p class="portfolio__item-desc">HTML5, CSS3, Sass, Gulp, Js, Responsive design</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://mighty-refuge-16024.herokuapp.com/">
                   <picture>
@@ -366,7 +366,7 @@
               <h3 class="portfolio__item-title">Emaily</h3>
               <p class="portfolio__item-desc">React.js, Redux, Node.js, MongoDB, Mongoose, Materialize.css, Stripe, Sendgrid</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/382187-code-and-magick/index.html">
                   <picture>
@@ -392,7 +392,7 @@
               <h3 class="portfolio__item-title">Sedona</h3>
               <p class="portfolio__item-desc">HTML5, CSS3, Js, Fixed design</p>
             </div>
-            <div class="swiper-slide">
+            <div class="portfolio__item swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/bikeshop/index.html">
                   <picture>
@@ -409,8 +409,8 @@
         <!-- If we need pagination -->
         	<div class="swiper-pagination"></div>
         <!-- If we need navigation buttons -->
-        	<div class="swiper-button-prev"></div>
-        	<div class="swiper-button-next"></div>
+        <div class="portfolio__button-prev  swiper-button-prev"></div>
+        <div class="portfolio__button-next  swiper-button-next"></div>
         </div>
       </div>
     </section>
@@ -442,11 +442,19 @@
   <script src="js/bundle.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         pagination: '.swiper-pagination',
         paginationClickable: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        spaceBetween: 30
+        spaceBetween: 10,
+        breakpoints: {
+          1180: {
+            slidesPerView: 1,
+            slidesPerGroup: 1
+          }
+        }
     });
   </script>
 </body>
